@@ -1,0 +1,61 @@
+%
+% Neutronique anim\'{e}e par ordinateur, logiciel Ivrogne.
+% ========================================================
+%
+\documentclass[12 pt,twoside]{report}
+\usepackage{graphicx}
+\begin{document}
+\setcounter{page}{95}
+\pagestyle{myheadings}
+\markboth{{\small Neutronique anim\'{e}e par ordinateur}}{{\small \textsl{Ivrogne}}}
+\thispagestyle{empty}
+~\\
+\centerline{{\LARGE \textsl{Ivrogne}}}\\
+~\\
+~\\
+~\\
+\textbf{Objectif du logiciel}\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}Sensibiliser, dans un contexte simplifi\'{e}, au mouvement brownien auquel s'apparente la diffusion des neutrons.\\
+\vspace*{-0.2 cm}\\
+\textbf{Pr\'{e}sentation du probl\`{e}me}\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}Le mouvement brownien tire son nom de l'observation faite par le natu\-ra\-liste \'{e}cossais Robert Brown qui, en 1827, regardait au microscope des particules dilu\'{e}es au sein de grains de pollen de la \textit{Clarkia pulchella}, une fleur sauvage nord-am\'{e}ricaine. Ces particules \'{e}taient anim\'{e}es d'un mouvement chaotique. Les trajectoires, form\'{e}es de très petits parcours en ligne droite constamment d\'{e}vi\'{e}s, pouvaient finalement s'\'{e}tirer sur des distances relativement importantes. Ce mouvement est d\^{u}, comme on le sait aujourd'hui, aux chocs incessants des mol\'{e}cules du liquide sur ces particules.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}Tant qu'ils ne sont pas absorb\'{e}s, les neutrons migrant dans la mati\`{e}re effectuent un mouvement de cette nature mais \`{a} une \'{e}chelle plus macroscopique~: les trajectoires sont des suites de parcours en ligne droite de l'ordre du centim\`{e}tre, \`{a} vitesse constante, interrompus par des collisions sur des noyaux d'atomes qui changent al\'{e}atoirement la direction de pro\-pa\-ga\-tion.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}Le logiciel \textsl{Ivrogne} est une mod\'{e}lisation simplif\'{e}e d'un tel mouvement. ``\,L'ivrogne\,'' d\'{e}ambule dans une grande ``\,ville\,'' form\'{e}e d'avenues nord-sud r\'{e}gu\-li\`{e}\-re\-ment espac\'{e}es d'une distance $\delta$ et coup\'{e}es de rues est-ouest \'{e}galement r\'{e}gu\-li\`{e}\-re\-ment espac\'{e}es de $\delta$. \`{A} chaque carrefour, ``\,l'ivrogne\,'' h\'{e}site car il a oubli\'{e} d'o\`{u} il vient et prend au hasard (avec les m\^{e}mes probabilit\'{e}s) l'une des quatres avenues ou rues qui se pr\'{e}sentent. Au bout du compte, il d\'{e}crit un cheminement totalement chaotique et parfaitement al\'{e}atoire.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}Sur l'\'{e}cran de l'ordinateur, les avenues et rues sont sous-entendues. Les carrefours sont rep\'{e}r\'{e}s par leurs coordonn\'{e}es cart\'{e}siennes. Le cheminement de ``\,l'ivrogne\,'' est repr\'{e}sent\'{e} par les segments de droite joignant au suivant chaque car\-re\-four o\`{u} il est pass\'{e}.\\
+\vspace*{-0.2 cm}\\
+\textbf{Mise en \oe uvre du logiciel}\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}Quand il lance le programme, l'utilisateur doit choisir (boutons \`{a} droite) le pas $\delta$ s\'{e}parant les avenues et rues. Par d\'{e}faut, $\delta=4$~pixels. Si les valeurs propos\'{e}es ne vous conviennent pas, cliquez sur ``\,Autre pas\,'', puis dans la barre de la petite fen\^{e}tre qui s'ouvre alors~; entrez la valeur que vous d\'{e}sirez et terminez par la touche \textit{Entr\'{e}e}.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}Plus la valeur du pas $\delta$ est prise petite, plus sera fin, compliqu\'{e} et long le cheminement simul\'{e} sur l'\'{e}cran~; mais plus sera longue la dur\'{e}e de la simulation du cheminement sur l'espace disponible \`{a} l'\'{e}cran. Il est donc conseill\'{e} de commencer par des valeurs assez grandes de $\delta$, par exemple, 4 ou 8 pixels~: cela permettra, d'une part, d'analyser plus facilement le d\'{e}tail d'un cheminement brownien et, d'autre part, d'estimer approximativement le temps n\'{e}cessaire \`{a} l'ordinateur pour une simulation plus fine donnant un meilleur effet esth\'{e}tique. Ce temps de simulation d'un cheminement est, en ordre de grandeur, inversement proportionnel \`{a} $\delta^{2}$.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}``\,L'ivrogne\,'' part toujours du point central de la ``\,ville\,''. Son che\-mi\-ne\-ment est interrompu d\`{e}s qu'il atteint l'un des quatre c\^{o}t\'{e}s de la fen\^{e}tre o\`{u} il \'{e}volue.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}L'utilisateur peut simuler autant de cheminements qu'il le souhaite. \`{A} chaque fois, il a le choix entre cinq possibilit\'{e}s~:\\
+\vspace*{-0.2 cm}\\
+$\bullet$~~\textit{effacer} le cheminement pr\'{e}c\'{e}dent pour faire le dessin d'un nouveau che\-mi\-ne\-ment~;\\
+\vspace*{-0.2 cm}\\
+$\bullet$~~dessiner un nouveau cheminement qui sera \textit{superpos\'{e}} \`{a} la figure d\'{e}j\`{a} pr\'{e}sente (si elle existe)~;\\
+\vspace*{-0.2 cm}\\
+$\bullet$~~effacer la figure pour faire un cheminement en \textit{ralenti}, permettant de mieux suivre les d\'{e}dales de l'ivrogne~; chaque parcours de l'ivrogne est alors espac\'{e} d'un intervalle de temps de 10 ms du pr\'{e}c\'{e}dent~;\\
+\vspace*{-0.2 cm}\\
+$\bullet$~~effacer la figure pour faire un cheminement en \textit{ralenti} et en \textit{zoom}, per\-met\-tant d'encore mieux suivre les d\'{e}dales de l'ivrogne~; la figure est faite alors avec le pas $5\delta$ (ou 25 si $\delta$ est inf\'{e}rieur \`{a} 5) au lieu de $\delta$~; chaque parcours de l'ivrogne est alors espac\'{e} d'un intervalle de temps de 50 ms du pr\'{e}c\'{e}dent~;\\
+\vspace*{-0.2 cm}\\
+$\bullet$~~\textit{arr\^{e}ter} le programme.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}L'utilisateur peut, s'il trouve un cheminement trop long, l'interrompre en cliquant sur l'un de ces cinq boutons.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}La couleur choisie pour le dessin change chaque fois qu'un nouveau cheminement est cr\'{e}\'{e}. Cela permet de distinguer les ``\,ivrognes\,'' dans le cas o\`{u} l'on superpose leurs cheminements... et permet d'aboutir \`{a} des effets esth\'{e}tiques assez surprenants apr\`{e}s quelques simulations superpos\'{e}es.\\
+\vspace*{-0.2 cm}\\
+\hspace*{1 cm}L'\'{e}paisseur du trait utilis\'{e} pour le trac\'{e} du cheminement est adapt\'{e} \`{a} l'espacement $\delta$~: le programme adopte la partie enti\`{e}re de $\delta/2+0,5$.\\
+~\\
+\newpage
+\thispagestyle{empty}
+~\\
+%%%%%
+\end{document}
